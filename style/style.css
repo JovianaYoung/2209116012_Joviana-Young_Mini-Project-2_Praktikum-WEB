@@ -1,0 +1,644 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Roboto:wght@400;500;700;900&display=swap");
+
+:root {
+  --primaryTextColor: #232e35;
+  --secondaryTextColor: #656d72; 
+  --borderColor: #f1f1f1;
+  --lineColor: #d9d9d9;
+  --primaryBackgroundColor: linear-gradient(to right, #e09be2 , #53d4eb) ;
+  --secondaryBackgroundColor: #fbfbfb;
+  --thirdBackgroundColor: #f5f3fe;
+  --primaryIconColor: #7e74f1;
+  --primaryIconColorHover: #51aee8;
+  --sectionPadding: 6rem 0;
+  --itemBorderRadius: 0.7rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--primaryTextColor);
+}
+
+p {
+  font-size: 1rem; /* 16px */
+  line-height: 1.9rem;
+}
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+  color: var(--secondaryTextColor);
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Menghapus garis bawah dari tautan di navbar */
+nav a {
+  text-decoration: none;
+}
+
+/* Menghapus garis bawah dari tautan "JovianaYoung" */
+.logo a {
+  text-decoration: none;
+}
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1100px) {
+  .main-container {
+    width: 90%;
+  }
+}
+
+/* button */
+.btn {
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1.5px solid var(--borderColor);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn :hover {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* titles */
+.section-title {
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
+}
+
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--secondaryTextColor);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.pre-title::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--lineColor);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+}
+
+/* layout */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+}
+
+/* logo and nav menu */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.logo a {
+  color: var(--primaryTextColor);
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: var(--primaryTextColor);
+}
+
+
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin: 7px;
+  transition: all 0.3s;
+  z-index: 99;
+}
+
+.burger {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 33px;
+  right: 35px;
+}
+
+/* hero section */
+#hero {
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+  color: var(--primaryIconColor);
+}
+
+.hero-right img {
+  width: 100%;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+/* Service Section */
+#services {
+  background-color: var(--secondaryBackgroundColor);
+  padding: var(--sectionPadding);
+}
+
+.services .pre-title {
+  margin: 0 auto;
+}
+
+.services-title {
+  text-align: center;
+}
+
+.services {
+  padding: 2rem 2rem;
+  text-align: center;
+  background: var(--primaryBackgroundColor);
+  border-radius: var(--itemBorderRadius);
+}
+
+.service h4 {
+  margin: 1.5rem 0;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.service p {
+  font-size: 1.3rem;
+}
+
+.service-icon {
+  background-color: var(--thirdBackgroundColor);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+
+.service-icon svg {
+  fill: var(--primaryIconColor);
+}
+
+/* Portofolio Section*/
+
+#portofolios {
+  padding: var(--sectionPadding);
+}
+
+.portofolio {
+  border-radius: var(--itemBorderRadius);
+  overflow: hidden;
+  border: 1px solid var(--borderColor);
+}
+
+.portofolio-cover {
+  height: 250px;
+}
+
+.portofolio-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.portofolio-info {
+  padding: 2rem 1.5rem;
+}
+
+.portofolio-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.portofolio h4 {
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.portofolio-title a svg:hover {
+  fill: var(--primaryIconColor);
+}
+
+.portofolio-title a svg {
+  transition: 0.2s ease-in-out;
+}
+
+.portofolio-tags {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.portofolio-tags div {
+  font-size: 0.9rem;
+  border: 1px solid var(--borderColor);
+  padding: 0.4rem 1rem;
+  color: var(--secondaryTextColor);
+}
+
+
+/* skills  & education */
+
+#skills {
+  padding: var(--sectionPadding);
+  background: var(--primaryBackgroundColor);
+}
+
+
+.skills, .education {
+  width: 90%;
+  margin: auto; /* Centering the content */
+}
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.education {
+  display: flex;
+  gap: 2rem;
+}
+
+.education .line {
+  padding: 0 0.7rem;
+}
+
+.education .line div {
+  width: 2px;
+  height: 100%;
+  background: var(--borderColor);
+  position: relative;
+}
+
+.education-info p {
+  margin: 0.6rem 0 1.4rem;
+}
+
+.education-years {
+  margin-bottom: 3rem;
+}
+
+/* the dot on the line */
+.education .line div::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: var(--borderColor);
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+
+.skills-right ul {
+  line-height: 2rem;
+  padding: 0 1rem;
+}
+
+.skills-right p {
+  margin-bottom: 0.3rem; /* Atur jarak antara tulisan atas dan bawah */
+  font-size: 0.9rem; /* Atur ukuran font menjadi lebih kecil */
+}
+
+
+.education-title {
+  font-size: 0.9rem; /* Ubah ukuran font menjadi lebih kecil */
+}
+
+/* Tulisan sekolah */
+.education-title {
+  font-size: 0.98rem; /* Ukuran teks sedikit lebih besar */
+  font-family: "Poppins", sans-serif; /* Menggunakan jenis font Poppins */
+  font-weight: 600; /* Mengatur tebal font menjadi sedikit lebih tebal */
+}
+
+/* Tulisan tahun */
+.education-years {
+  font-size: 0.95rem; /* Ukuran teks sedikit lebih besar dari sebelumnya */
+  font-family: "Poppins", sans-serif; /* Menggunakan jenis font Poppins */
+  font-weight: 600; /* Mengatur tebal font menjadi sedikit lebih tebal */
+}
+
+
+.education,
+.work-experience,
+.internship-experience,
+.organizational-experience {
+  font-family: "Poppins", sans-serif; /* Menyamakan font untuk Education dan Experience */
+}
+
+/* ATUR CARD *
+/* Tambahkan jarak antara kartu */
+.custom-card {
+  margin-bottom: 20px; /* Ubah sesuai kebutuhan Anda */
+}
+
+/* Buat semua kartu memiliki ukuran yang sama */
+.custom-card {
+  height: 100%; /* Atur tinggi kartu */
+}
+
+.card-body {
+  height: 100%; /* Atur tinggi body kartu */
+}
+
+row {
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  display: flex;
+  align-items: stretch; /* Mengatur tinggi semua kolom sama */
+}
+
+.custom-card {
+  margin-bottom: 20px; /* Atur jarak antara kartu */
+}
+
+.card-body {
+  height: 100%; /* Atur tinggi body kartu */
+}
+
+
+/* DISINI UNTUK CSS CERTIFICATE */
+/* Bootstrap 5 classes */
+.certificates,
+.portofolios {
+  padding: 50px 0;
+}
+
+.certificates .pre-title,
+.portofolios .pre-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.certificates .section-title,
+.portofolios .section-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.certificates .custom-card,
+.portofolios .custom-card {
+  border: none;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.certificates .custom-card .card-body,
+.portofolios .custom-card .card-body {
+  padding: 20px;
+}
+
+.project {
+  padding: 50px 0;
+}
+
+.project h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  border: none;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.project-card a {
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.certificates .pre-title {
+  font-size: 16px; /* Ukuran teks yang lebih kecil */
+  color: #333;
+}
+
+
+/* DISINI END CSS CERTIFICATE */
+
+/* contact section */
+#contact {
+  padding: var(--sectionPadding);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+
+.contact-form div {
+  margin-bottom: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  font-family: "Roboto", sans-serif;
+  background: var(--secondaryBackgroundColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 3px;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9d9fa1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #7d7d7d;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  background-color: var(--primaryIconColor);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: var(--primaryIconColorHover);
+}
+
+.contact-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-item-icon {
+  background: var(--thirdBackgroundColor);
+  width: 53px;
+  height: 53px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-item-icon svg {
+  fill: var(--primaryIconColor);
+}
+
+.contact-item-detail h4 {
+  margin-bottom: 0.6rem;
+  font-size: 1,2rem; /* Mengatur ukuran teks menjadi lebih kecil */
+  font-weight: bold; /* Menjadikan teks sedang */
+}
+
+
+/* footer */
+footer {
+  padding: 2rem 0;
+  background: var(--primaryBackgroundColor);
+  text-align: center;
+}
+
+.footer-icons {
+  margin-bottom: 1.5rem;
+}
+
+.footer-icons a {
+  margin: 0 0.5rem;
+}
+
+.footer-icons svg {
+  fill: #3e3f40;
+}
+
+.footer-icons a:hover svg {
+  fill: #000;
+}
+
+.contact-item-detail h4 {
+  margin-bottom: 0.6rem;
+  font-size: 1rem; /* Mengatur ukuran teks menjadi lebih kecil */
+  font-weight: bold; /* Menjadikan teks sedang */
+}
+
+
+

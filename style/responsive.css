@@ -1,0 +1,176 @@
+@media screen and (max-width: 1000px) {
+  p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+  .grid-3 {
+    gap: 1rem;
+  }
+
+  .skills-right ul li {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  /* portofolio */
+  .portofolio {
+    display: block;
+    cursor: pointer;
+  }
+
+  .toggle-portofolio .line-1 {
+    transform: rotate(-45deg) translate(-5px, 7px);
+  }
+
+  .toggle-portofolio .line-2 {
+    opacity: 0;
+  }
+
+  .toggle-portofolio .line-3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  /* navigation */
+  nav {
+    position: fixed;
+    width: 50%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    flex-direction: column;
+    background: var(--primaryBackgroundColor);
+    border-left: 1px solid var(--borderColor);
+    z-index: 9;
+    transform: translateX(100%);
+    transition: 0.3s ease-in-out;
+  }
+
+  nav ul {
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav-active {
+    transform: translateX(0);
+  }
+
+  :root {
+    --sectionPadding: 4rem 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin: 0.6rem 0 2.5rem;
+  }
+
+  .pre-title {
+    font-size: 0.8rem;
+  }
+
+  /* hero section */
+
+  #hero {
+    grid-template-columns: 1fr;
+    height: fit-content;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+
+  .hero-right img {
+    width: 70%;
+  }
+
+  .hero-left {
+    text-align: center;
+    padding-bottom: 5rem;
+  }
+
+  .hero-left .pre-title {
+    margin: 0 auto;
+  }
+
+  .hero-name {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* skills section */
+
+  .skills-grid {
+    gap: 1rem;
+  }
+
+  /* footer */
+  footer {
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  /* titles */
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .pre-title {
+    font-size: 0.7rem;
+  }
+}
+
+/* CSS untuk membuat gambar responsif */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+@media screen and (max-width: 571.20px) {
+  /* Mengatur ulang tata letak untuk gambar dan teks */
+  .hero-right img {
+    width: 100%; /* Menjadikan gambar penuh lebar */
+  }
+
+  .hero-left {
+    padding-bottom: 2rem; /* Mengurangi padding bawah pada elemen teks */
+  }
+
+  .hero-left .pre-title {
+    font-size: 0.8rem; /* Mengurangi ukuran font pre-title */
+  }
+
+  .hero-name {
+    font-size: 1.8rem; /* Mengurangi ukuran font nama */
+  }
+
+  /* Atur ulang tata letak untuk navigasi */
+  nav {
+    width: 100%; /* Menjadikan navigasi penuh lebar */
+    padding: 20px; /* Menambahkan padding pada navigasi */
+  }
+}
+
+/* CSS untuk membuat teks menjadi rapi di tampilan desktop */
+@media screen and (min-width: 826px) {
+  .hero-left {
+    text-align: center; /* Pusatkan teks secara horizontal */
+    max-width: 80%; /* Membatasi lebar maksimum teks */
+    margin: auto; /* Pusatkan teks secara horizontal */
+  }
+  
+  .hero-left .hero-name {
+    font-size: 2.5rem; /* Sesuaikan ukuran teks sesuai kebutuhan */
+    font-weight: bold; /* Teks menjadi bold */
+  }
+  
+  .hero-left .portfolio-name {
+    display: block; /* Mengubah teks menjadi blok untuk memisahkan antara teks */
+    margin-top: 10px; /* Menambahkan jarak atas antara kedua teks */
+    font-size: 2rem; /* Sesuaikan ukuran teks sesuai kebutuhan */
+    font-weight: bold; /* Teks menjadi bold */
+  }
+}
